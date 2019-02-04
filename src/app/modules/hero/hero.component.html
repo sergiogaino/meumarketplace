@@ -1,0 +1,20 @@
+<div class="d-flex justify-content-center" *ngIf="showError">
+  <p>{{errorMessage}}</p>
+</div>
+<swiper [config]="config">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide" *ngFor="let banner of banners">
+      <img class="image-hero" src="../../../assets/{{banner.IMAGE}}"/>
+    </div>
+  </div>
+
+  <!-- Add Pagination -->
+  <div class="swiper-pagination"></div>
+  <!-- Add Arrows -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</swiper>
+
+
+
+

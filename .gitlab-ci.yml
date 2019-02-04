@@ -1,0 +1,23 @@
+stages:
+  - build
+  - test
+
+image: trion/ng-cli-karma
+
+building:
+  stage: build
+  script:
+    - echo "building"
+    - mkdir build
+    - touch build/info.txt
+    - npm version
+    - docker version
+  artifacts:
+    paths:
+      - build/
+
+testing:
+  stage: test
+  script: 
+    - echo "testing"
+    - test -f "build/info.txt"

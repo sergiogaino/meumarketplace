@@ -1,0 +1,10 @@
+<div class="card mb-4 box-shadow product-item" (click)="viewProductDetail(product.id, product.categoryIds,  product.clickUrl)">
+  <img class="card-img-top product-image" data-src="{{product.imageId}}" onerror="this.src='../../assets/sem_foto.png'" alt="Produto">
+  <div class="card-body">
+    <p class="card-text text-truncate">{{product.brand}}</p>
+    <p class="card-text text-truncate">{{product.name}}</p>
+    <div class="d-flex justify-content-between align-items-center">
+      <strong class="text-muted">{{product.priceCents}} Pontos</strong>
+    </div>
+  </div>
+</div>

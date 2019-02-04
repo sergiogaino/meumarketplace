@@ -1,0 +1,14 @@
+<div class="carousel-content">
+  <swiper [config]="config">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" *ngFor="let product of products">
+        <app-product [product]="product"></app-product>
+      </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </swiper>
+</div>

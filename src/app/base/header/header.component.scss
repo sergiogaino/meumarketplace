@@ -1,0 +1,39 @@
+.logo-image {
+    width: 160px;
+}
+
+
+.content-header {
+    height: 90px;
+}
+
+.remover-margin {
+    margin: 0;
+}
+
+.user-information{
+    color: white;
+    display: inline;
+    vertical-align: sub
+}
+
+.user-information span {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.header-end {
+    margin: 0;
+    border-top: 1px solid #ffc107;
+}
+
+@media (min-width: 1200px){
+    .container {
+        max-width: 1468px;
+    }
+}
+
+i{
+    font-size: 30px;
+    color: white;
+}

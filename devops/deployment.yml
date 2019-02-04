@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: site-master
+  labels:
+    app: site-master
+spec:
+  ports:
+    - port: 80
+  selector:
+    app: site-master
+    tier: frontend
+  type: NodePort
+---
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: site-master
+  labels:
+    app: site-master
+spec:
+  selector:
+    matchLabels:
+      app: site-master
+      tier: frontend  
+  template:
+    metadata:
+      labels:
+        app: site-master
+        tier: frontend
+    spec:
+      containers:
+      - image: renatomonteiro/site-master:v7
+        name: site-master
+        ports:
+        - containerPort: 80
+          name: site-http
+

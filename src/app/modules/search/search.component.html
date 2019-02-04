@@ -1,0 +1,7 @@
+
+<div class="d-flex flex-column align-items-center p-3 px-md-4 mb-3 bg-dark border-bottom box-shadow">
+  <div class="form-inline d-flex col-12 my-2 my-md-0 align-items-center justify-content-center">
+    <input #searchText class="input-search form-control col-8 mr-sm-2" value={{searchParam}} (keyup.enter)="startSearch(searchText.value)"  type="text" placeholder="O que você está procurando?" aria-label="O que você está procurando?">
+    <button class="button-search btn btn-warning my-2 my-sm-0" (click)="startSearch(searchText.value)">Buscar</button>
+  </div>
+</div>

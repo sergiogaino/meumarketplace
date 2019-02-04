@@ -1,0 +1,14 @@
+<main role="main">
+  <app-search></app-search>
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4" *ngFor="let product of products">
+          <app-product [product]="product"></app-product>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+

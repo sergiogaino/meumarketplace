@@ -1,0 +1,22 @@
+<header>
+  <div class="navbar navbar-dark bg-dark content-header">
+    <div class="container d-flex justify-content-between remover-margin">
+      <a href="/home" class="navbar-brand d-flex align-items-center">
+        <img class="logo-image" src="../../../assets/circle.png" alt="Card image cap">
+      </a>
+      <div>
+        <div class="user-information">
+            <a href="/home">
+          <i class="fa fa-home px-4"></i>
+        </a>
+          <i class="fa fa-user"></i>
+          <span *ngIf="userDetails">{{userDetails.firstName}}</span>
+          <span *ngIf="!userDetails">Olá Visitante</span>
+        </div>
+        <button type="button" class="btn btn-outline-warning" *ngIf="!userDetails" (click)="goToLogin()">Acessar</button>
+        <button type="button" class="btn btn-outline-warning" *ngIf="userDetails" (click)="doLogout()">sair</button>
+    </div>
+    </div>
+  </div>
+  <hr class="header-end">
+</header>
